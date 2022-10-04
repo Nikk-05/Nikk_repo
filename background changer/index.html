@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Changer</title>
+    <style>
+        body{
+            padding: 50px 50px;
+            text-align: center;
+        }
+        h1{
+            font-size: 35px;
+        }
+        img{
+           /* image-resolution:720px; */
+           height: 500px;
+           width: 1400px;
+        }
+        p{
+            text-align: justify;
+        }
+        #container{
+            text-align: right;
+        }
+        .clr{
+            height: 20px;
+            width: 20px;
+            display: inline-block;
+            border: solid;
+            border-color: rgb(122, 121, 121);
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        #white{
+            background-color: #ffffff;
+        }
+        #red{
+            background-color: #7fffd4;
+        }
+        #yellow{
+            background-color: #ce9aff;
+        }
+        #black{
+            background-color: #000000;
+        }
+    </style>
+</head>
+<body>
+   <div id="container">
+    <span class="clr" id="white" onclick="changeBG('#ffffff')"></span>
+    <span class="clr" id="red" onclick="changeBG('#7fffd4')"></span>
+    <span class="clr" id="yellow" onclick="changeBG('#ce9aff')"></span>
+    <span class="clr" id="black" onclick="changeBG('#000000')"></span>
+   </div>
+    <h1 class="txt">Maldives</h1>
+    <img src="pic.jpg" alt="">
+    <p class="txt">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum ab aliquid est nam eligendi sunt hic aspernatur iusto porro error amet quos consectetur cumque vitae nesciunt quisquam, quidem sapiente repudiandae sit ea deleniti? Excepturi, est ex. At quae non dolore incidunt facere, odio fuga optio deserunt quidem delectus accusamus numquam, atque eum quaerat commodi veniam libero tempore vitae. Aliquam aperiam totam ex? Fugiat aperiam maxime ex beatae et minima, illo sit ipsum dolore nesciunt nobis mollitia in! Minima asperiores fugit qui numquam eos nihil expedita. Fuga minima voluptatum ab cumque iusto. Tempore, alias. Dignissimos reprehenderit quam debitis laborum fugit mollitia labore atque ad, sequi sit blanditiis quae illum laudantium tempora dolorum nostrum veniam facilis doloremque ducimus ipsam consequatur harum. Ullam commodi explicabo amet libero facilis in minima unde quod, iusto nemo doloremque consectetur molestias vel aperiam aut autem ratione temporibus eveniet officia consequuntur optio illo neque! Et quas nulla dolor, debitis iure, adipisci laudantium cupiditate consequatur, recusandae repudiandae explicabo? Labore illo repellendus beatae saepe voluptates assumenda explicabo temporibus soluta facere laboriosam dolore sint possimus eos tempore odio suscipit, aliquam, cum, amet non vel expedita quae rerum architecto! Maiores doloribus ipsum delectus, minus esse fugit ipsa tempore debitis possimus ratione unde quos voluptates nihil repellendus voluptatibus sapiente! Sint porro autem modi corrupti quidem odit quod corporis voluptas qui assumenda temporibus eveniet tempore quisquam fugit, ab aliquam sequi iusto soluta necessitatibus provident unde nostrum culpa. Repellendus ipsam aperiam vero atque excepturi necessitatibus officiis, distinctio rem ea, alias obcaecati vitae? Repellendus maiores, odio atque ipsa a eaque id, iure veniam mollitia necessitatibus expedita dolor officia quibusdam similique saepe eum itaque laborum suscipit, molestiae temporibus deserunt cumque. Numquam voluptate magnam possimus incidunt, totam commodi sapiente quidem nobis dignissimos non fuga ipsum sequi ab dolor sunt ipsa officiis et fugiat cupiditate, vel consequatur deleniti aliquid.
+    </p>
+    <script>
+        function changeBG(color){
+            document.body.style.backgroundColor=color
+             let text=document.getElementsByClassName('txt');
+            if(color=='#000000')
+            {
+                for(let elm of text)
+                {
+                    elm.style.color="#ffffff";
+                }
+            }
+            else
+            {
+                for(let elm of text)
+                {
+                    elm.style.color="#000000";
+                } 
+            }
+        }
+
+
+
+    </script>
+
+</body>
+</html>
