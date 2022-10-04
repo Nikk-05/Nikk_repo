@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Counter</title>
+    <style>
+        body{
+            padding:50px 100px;
+            text-align: center;
+        }
+        h1{
+            
+            background-color:cornflowerblue;
+            color:antiquewhite;
+            padding:10px;
+            margin:0px; 
+        }
+        textarea{
+            width: 99.5%;
+            border-color: cornflowerblue;
+            border-radius: bold;
+        }
+        p{
+            background-color: cornflowerblue;
+            padding:10px;
+            margin:0px;
+            color:antiquewhite;
+            font-size:25px;
+            font:bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Word Counter</h1>
+    
+    <textarea id="txt" cols="30" rows="10" placeholder="Enter your sentence"></textarea>
+    <p>
+        <span id="words">0</span> words and 
+        <span id="char">0</span> characters
+    </p>
+
+    <script>
+        let sentence=document.getElementById("txt");
+        sentence.addEventListener('input',function(){
+            var text=this.value;
+            let char=text.length;
+            document.getElementById("char").innerHTML=char;
+            text=text.trim();
+            // count word
+            let count=text.split(' ');
+            let words_array=count.filter(function(val){
+                return val!="";
+            });
+            document.getElementById('words').innerHTML=words_array.length;
+
+        });
+
+
+
+    </script>
+</body>
+</html>
